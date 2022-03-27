@@ -3,3 +3,5 @@
 This is the repo for paper PICCOLO: Exposing Complex Backdoors in NLP Transformer Models.
 
 Please refer to the `PICCOLO_online_appendix.pdf` in this repo for the online appendix
+
+The code for PICCOLO is coming soon.
