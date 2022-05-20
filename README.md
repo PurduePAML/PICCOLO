@@ -4,4 +4,9 @@ This is the repo for paper PICCOLO: Exposing Complex Backdoors in NLP Transforme
 
 Please refer to the `PICCOLO_online_appendix.pdf` in this repo for the online appendix
 
-The code for PICCOLO is coming soon.
+This repo include the code of PICCOLO submission to TrojAI rounds 5 to 7.
+
+
+# Contacts
+
+Yingqi Liu, liu1751@purdue.edu
