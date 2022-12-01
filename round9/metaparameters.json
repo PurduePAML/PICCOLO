@@ -1,0 +1,11 @@
+{
+  "sc_re_mask_lr": 5e-1,
+  "sc_re_epochs": 100,
+  "sc_word_trigger_length": 3,
+  "ner_re_mask_lr": 5e-1,
+  "ner_re_epochs": 60,
+  "ner_word_trigger_length": 3,
+  "qa_re_mask_lr": 5e-2,
+  "qa_re_epochs": 120,
+  "qa_word_trigger_length": 3
+}

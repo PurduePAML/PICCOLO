@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Algorithm Meta-Parameters",
+  "technique": "PICCOLO",
+  "technique_description": "This is a trigger reverse engineering technique on NLP models. PICCOLO first reverse-engineers a list of candidate trigger words and then uses beam search to search for the best pair of trigger words with highest ASR or lowest loss. Then it trains a classifier on ASR and loss of the reverse-engineered trigger words. At last, it uses a classifier output to determine if a model is trojaned.",
+  "technique_changes": "Fix one instability source that unselected label pair has very large loss",
+  "repo_name": "https://github.com/PurduePAML/TrojAI-round9-PICCOLO",
+  "commit_id": "b2904d9114c0f8dc31e154d63381954c4fedee46",
+  "required": [ "sc_re_mask_lr", "sc_re_epochs", "sc_word_trigger_length", "ner_re_mask_lr", "ner_re_epochs", "ner_word_trigger_length", "qa_re_mask_lr", "qa_re_epochs", "qa_word_trigger_length" ],
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "sc_re_mask_lr": {
+      "description": "learning rate of trigger optimization for sc",
+      "type": "number",
+      "minimum": 1e-4,
+      "maximum": 1e1
+    },
+    "sc_re_epochs": {
+      "description": "epochs trigger optimization for sc",
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 1000
+    },
+    "sc_word_trigger_length": {
+      "description": "optimization trigger word length for sc",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "ner_re_mask_lr": {
+      "description": "learning rate of trigger optimization for ner",
+      "type": "number",
+      "minimum": 1e-4,
+      "maximum": 1e1
+    },
+    "ner_re_epochs": {
+      "description": "epochs trigger optimization for ner",
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 1000
+    },
+    "ner_word_trigger_length": {
+      "description": "optimization trigger word length for ner",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "qa_re_mask_lr": {
+      "description": "learning rate of trigger optimization for qa",
+      "type": "number",
+      "minimum": 1e-4,
+      "maximum": 1e1
+    },
+    "qa_re_epochs": {
+      "description": "epochs trigger optimization for qa",
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 1000
+    },
+    "qa_word_trigger_length": {
+      "description": "optimization trigger word length for qa",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    }
+  }
+}
